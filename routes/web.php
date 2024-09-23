@@ -17,5 +17,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
+
 Route::get('/reserves',[ReservationController::class,"index"])->name('reserves.index');
 Route::post('/reserves/insert',[ReservationController::class,"insert"])->name('reserves.insert');

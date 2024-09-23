@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'admin' => [
+        'driver' => 'session',     // ใช้ session ในการจัดการสถานะการล็อกอินของแอดมิน
+        'provider' => 'admins',    // ใช้ provider ที่ชื่อว่า 'admins' สำหรับการดึงข้อมูลแอดมินจากฐานข้อมูล
+    ],
     ],
 
     /*
@@ -69,6 +73,11 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'admins' => [
+        'driver' => 'eloquent',     // ใช้ Eloquent ORM ในการดึงข้อมูลแอดมินจากฐานข้อมูล
+        'model' => App\Models\Admin::class, // โมเดล Admin ถูกใช้เพื่อดึงข้อมูลของแอดมิน
+    ],
+
     ],
 
     /*
