@@ -3,8 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ParkingController;
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 
 Route::middleware([
@@ -27,6 +31,6 @@ Route::middleware([
 // });
 
 
-    Route::get('/parking', [ParkingController::class, 'showForm'])->name('showForm');
-    Route::post('/parking', [ParkingController::class, 'submitForm'])->name('submitForm');
+    // Route::get('/parking', [ParkingController::class, 'showForm'])->name('showForm');
+    // Route::post('/parking', [ParkingController::class, 'submitForm'])->name('submitForm');
 
