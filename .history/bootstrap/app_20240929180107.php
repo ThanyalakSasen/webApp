@@ -13,8 +13,8 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         //
-        // $middleware->add(\App\Http\Middleware\TrustProxies::class);
-        // $middleware->add(\App\Http\Middleware\HandleCors::class);
+        $middleware->add(\App\Http\Middleware\TrustProxies::class);
+        $middleware->add(\App\Http\Middleware\HandleCors::class);
 
     })
     ->withExceptions(function (Exceptions $exceptions) {
